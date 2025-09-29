@@ -27,6 +27,13 @@ Nous avons donc optés pour faire un backup des données sur stockage temporaire
 
 Un test d'intégrité des données sera réalisé à la fin de processus. 
 
+- Copie des données du RAID 1 dans une solution de stockage temporaire
+- Supprimer le RAID 1
+- Créer un RAID 6
+- Copier les données depuis le stockage externe vers le RAID 6
+- Faire un test d'intégrité des données
+
+
 ## TODO
 
 ### Configuration du RAID de départ
