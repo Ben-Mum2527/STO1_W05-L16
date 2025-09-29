@@ -6,22 +6,30 @@
 
 |OS |RAID|Nb volumes|Capacité totale|Capacité résiduelle|
 |:--|:-- |:--       |:--            |:--|
-||||||
+|Windows|0|2|30|25|
 
 * Situation à atteindre
 
 |OS |RAID|Nb volumes|Capacité totale|Capacité résiduelle|
 |:--|:-- |:--       |:--            |:--|
-||||||
+|Windows|5|3|30|25|
 
 
 ## Pré-requis
 
-//TODO - expliquer les pré-requis nécessaires en début d'intervention pour cette étape
+- Avoir un RAID 0 fonctionnel
 
 ## Analyse
 
-//TODO expliquer l'approche qui va être favorisée, sources à l'appui
+Il est très compliqué de migrer d'un RAID 0 à un RAID 5 sans perte de données. On peut cependant passer les données dans une solution de stockage temporaire.
+
+Les étapes pour la migration seraient donc les suivantes: 
+
+- Copie des données du RAID 0 dans une solution de stockage temporaire
+- Supprimer le RAID 0
+- Créer un RAID 5
+- Copier les données depuis le stockage externe vers le RAID 5
+- Faire un test d'intégrité des données
 
 
 ## TODO

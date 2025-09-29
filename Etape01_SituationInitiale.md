@@ -4,24 +4,30 @@
 
 * Situation de départ
 
-|OS |RAID|Nb volumes|Capacité totale|Capacité résiduelle|
-|:--|:-- |:--       |:--            |:--|
-||||||
+Il n'y a pas encore de RAID à cette étape. Toutes les données sont stockées sur le bucket S3.
 
 * Situation à atteindre
 
 |OS |RAID|Nb volumes|Capacité totale|Capacité résiduelle|
 |:--|:-- |:--       |:--            |:--|
-||||||
+|Windows|0|2|20|15|
 
 
 ## Pré-requis
 
-//TODO - expliquer les pré-requis nécessaires en début d'intervention pour cette étape
+Les pré-requis nécéssaires pour cette étape sont: 
+
+- Machine windows avec 3 disques de 15 Go dédiés au RAID
+- Un Bucket S3 avec des données de test 
 
 ## Analyse
 
-//TODO expliquer l'approche qui va être favorisée, sources à l'appui
+La réalisation de cette situation initiale se fera par ces étapes: 
+
+1. Création d'un RAID0 via un script sur la machine windows
+2. Copier les données du Bucket S3 vers le nouveau RAID.
+3. Test d'intégrité des données par comparaison des hashs entre données source et la copie
+
 
 
 ## TODO

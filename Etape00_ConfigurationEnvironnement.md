@@ -2,11 +2,18 @@
 
 ## Objectifs
 
-//TODO
+Mise en place :
+
+- Une machine virtuelle Windows accessible via RDP avec 3 disques utilisés pour la création d’un RAID 0 puis d’un RAID 5
+
+- Une machine virtuelle Linux accessible par SSH avec 4 disques utilisés pour la création d’un RAID 0 puis d’un RAID 5
 
 ## Pré-requis
 
-//TODO
+- Logiciel de virtualisation (VMWare)
+- Accès internet
+- Accès à un Bucket AWS S3
+
 
 ## Valider les accès à l'infrastructure
 

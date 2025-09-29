@@ -6,22 +6,30 @@
 
 |OS |RAID|Nb volumes|Capacité totale|Capacité résiduelle|
 |:--|:-- |:--       |:--            |:--|
-||||||
+|Windows|5|3|30|25|
 
 * Situation à atteindre
 
 |OS |RAID|Nb volumes|Capacité totale|Capacité résiduelle|
 |:--|:-- |:--       |:--            |:--|
-||||||
+|Linux|1|2|15|15|
 
 
 ## Pré-requis
 
-//TODO - expliquer les pré-requis nécessaires en début d'intervention pour cette étape
+- Un RAID 5 sur une machine Windows
+- Un Bucket S3 pour la migration inter-machines
+- Une machine Linux avec 2 disks de 10 Go non-utilisés
 
 ## Analyse
 
-//TODO expliquer l'approche qui va être favorisée, sources à l'appui
+À cette étape il faut passer un Bucket S3 pour la migration entre les deux machines.
+
+- Migrer les données depuis le RAID 5 vers le Bucket
+- Tester l'intégrité des données
+- Créer le RAID 1 sur la machine Linux
+- Migrer les données depuis le Bucket sur le nouveau RAID 1
+- Tester à nouveau l'intégrité des données
 
 
 ## TODO

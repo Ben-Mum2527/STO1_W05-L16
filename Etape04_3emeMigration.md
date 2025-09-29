@@ -6,23 +6,26 @@
 
 |OS |RAID|Nb volumes|Capacité totale|Capacité résiduelle|
 |:--|:-- |:--       |:--            |:--|
-||||||
+|Linux|1|2|15|15|
 
 * Situation à atteindre
 
 |OS |RAID|Nb volumes|Capacité totale|Capacité résiduelle|
 |:--|:-- |:--       |:--            |:--|
-||||||
+|Linux|6|4|30|30|
 
 
 ## Pré-requis
 
-//TODO - expliquer les pré-requis nécessaires en début d'intervention pour cette étape
+- Un RAID 1 fonctionnel
 
 ## Analyse
 
-//TODO expliquer l'approche qui va être favorisée, sources à l'appui
+Après recherche, nous avons constaté que le risques de pertes de données pour passer d'un RAID 1 à un RAID 5 puis un RAID 6 ne sont pas négligables.
 
+Nous avons donc optés pour faire un backup des données sur stockage temporaire.
+
+Un test d'intégrité des données sera réalisé à la fin de processus. 
 
 ## TODO
 
