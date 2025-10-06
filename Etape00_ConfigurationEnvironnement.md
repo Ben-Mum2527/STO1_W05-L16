@@ -22,13 +22,20 @@ Mise en place :
 
 
 ```bash
-ssh linaccess@192.168.15.136
+Par SSH: 
+    Commande : linaccess@192.168.15.136
+    Password : P@$$w0rd
+
 ```
 
 ### Accès l'instance windows
 
 ```bash
-//TODO INPUT
+Par RDP : 
+    IP: 192.168.30.136
+    Utilisateur : winaccess
+    Password: P@$$w0rd
+
 ```
 
 ```bash
@@ -42,7 +49,7 @@ Machine Linux: Connexion en NAT avec l'IP du PC physique
 ```
 
 ```bash
-//TODO OUTPUT
+Machine Windows: Connexion en NAT avec l'IP du PC physique
 ```
 
 ### Volumes nécessaires pour la première étape du projet
