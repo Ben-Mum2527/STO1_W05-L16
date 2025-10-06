@@ -6,7 +6,7 @@
 
 |OS |RAID|Nb volumes|Capacité totale|Capacité résiduelle|
 |:--|:-- |:--       |:--            |:--|
-|Windows|5|3|30|25|
+|Windows|5|3|45|25|
 
 * Situation à atteindre
 

@@ -6,7 +6,7 @@ Mise en place :
 
 - Une machine virtuelle Windows accessible via RDP avec 3 disques utilisés pour la création d’un RAID 0 puis d’un RAID 5
 
-- Une machine virtuelle Linux accessible par SSH avec 4 disques utilisés pour la création d’un RAID 0 puis d’un RAID 5
+- Une machine virtuelle Linux accessible par SSH avec 4 disques utilisés pour la création d’un RAID 1 puis d’un RAID 6
 
 ## Pré-requis
 
@@ -38,10 +38,6 @@ Par RDP :
 
 ```
 
-```bash
-//TODO OUTPUT
-```
-
 ### Connection internet sortante
 
 ```bash
@@ -59,7 +55,7 @@ Machine Linux: 2 disques de 10GB
 ```
 
 ```bash
-//TODO OUTPUT
+Machine Linux: 2 disques de 10GB
 ```
 
 ### Accès aux différents buckets
