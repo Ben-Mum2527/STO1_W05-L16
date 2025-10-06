@@ -10,7 +10,7 @@ Il n'y a pas encore de RAID à cette étape. Toutes les données sont stockées 
 
 |OS |RAID|Nb volumes|Capacité totale|Capacité résiduelle|
 |:--|:-- |:--       |:--            |:--|
-|Windows|0|3|45|40|
+|Windows|0|2|30|25|
 
 
 ## Pré-requis
