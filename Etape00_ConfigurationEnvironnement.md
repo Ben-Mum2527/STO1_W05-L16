@@ -19,12 +19,10 @@ Mise en place :
 
 ### Accès à l'instance linux
 
-```bash
-//TODO INPUT
-```
+
 
 ```bash
-//TODO OUTPUT
+ssh linaccess@192.168.15.136
 ```
 
 ### Accès l'instance windows
@@ -40,7 +38,7 @@ Mise en place :
 ### Connection internet sortante
 
 ```bash
-//TODO INPUT
+Machine Linux: Connexion en NAT avec l'IP du PC physique
 ```
 
 ```bash
@@ -50,7 +48,7 @@ Mise en place :
 ### Volumes nécessaires pour la première étape du projet
 
 ```bash
-//TODO INPUT
+Machine Linux: 2 disques de 10GB
 ```
 
 ```bash
