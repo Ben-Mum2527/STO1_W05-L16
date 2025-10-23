@@ -23,7 +23,7 @@ Mise en place :
 
 ```bash
 Par SSH: 
-    Commande : linaccess@192.168.15.136
+    Commande : raidlinux@192.168.253.133
     Password : P@$$w0rd
 
 ```
@@ -51,11 +51,11 @@ Machine Windows: Connexion en NAT avec l'IP du PC physique
 ### Volumes nécessaires pour la première étape du projet
 
 ```bash
-Machine Linux: 2 disques de 10GB
+Machine windows: 2 disques de 10GB
 ```
 
 ```bash
-Machine Linux: 2 disques de 10GB
+Machine Linux: 2 disques de 20GB
 ```
 
 ### Accès aux différents buckets
@@ -63,11 +63,7 @@ Machine Linux: 2 disques de 10GB
 #### Bucket contenant les données du client
 
 ```bash
-//TODO INPUT
-```
-
-```bash
-//TODO OUTPUT
+s3://sto1-project-data
 ```
 
 #### Bucket "temporaire" pour la migration
@@ -77,7 +73,7 @@ Machine Linux: 2 disques de 10GB
 ```
 
 ```bash
-//TODO OUTPUT
+s3://sto1-corentin
 ```
 
 ## Installation des dépendances
@@ -97,13 +93,40 @@ Machine Linux: 2 disques de 10GB
 #### Sous Linux
 
 ```bash
-//TODO INPUT
+#Installer le paquet awscli
+ sudo apt install awscli
+
+#Vérifier que l'installation a réussi
+ aws --version
+ #Output attendu
+ aws-cli/2.9.19 Python/3.11.2 Linux/6.1.0-40-amd64 source/x86_64.debian.12
 ```
 
 ```bash
-//TODO OUTPUT
-```
+#Créer config par défaut AWS
+ aws configure
 
+ AWS Access Key ID : #Entrer AccessKeyId donné
+ AWS Secret Access Key : #Entrer SecretAccessKey donné
+ Default region name [None]: #Valider
+ Default output format [none]: #Entrer "json"
+```
+```bash
+#Paramétrer le profil sto1
+#Modifier le fichier credentials sous .aws
+ sudo nano .aws/credentials
+
+#Remplacer la config [default] par la config suivante:
+ [sto1]
+ aws_access_key_id = VotreAccessKeyId
+ aws_secret_access_key = VotreSecretAccessKey
+
+#Tester la config
+#Accéder à votre répertoire S3 avec le profil sto1
+ aws s3 ls s3://sto1-corentin --profile sto1
+ #Output attendu: Tous les fichiers présents dans le répertoire S3
+ 2025-09-15 15:50:53   Mario.jpg
+```
 ### Logiciel RAID
 
 #### Sous Windows
@@ -119,11 +142,7 @@ Machine Linux: 2 disques de 10GB
 #### Sous Linux
 
 ```bash
-//TODO INPUT
-```
-
-```bash
-//TODO OUTPUT
+Utilitaire mdadm
 ```
 
 ### Language de scripting
@@ -141,9 +160,6 @@ Machine Linux: 2 disques de 10GB
 #### Sous Linux
 
 ```bash
-//TODO INPUT
+BASH
 ```
 
-```bash
-//TODO OUTPUT
-```
