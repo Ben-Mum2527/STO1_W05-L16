@@ -41,7 +41,7 @@ Un test d'intégrité des données sera réalisé à la fin de processus.
 #### Mise en place
 
 ```bash
-//TODO INPUT
+aws s3 cp /media/raid1/ s3://sto1-corentin/ --recursive --profile sto1
 ```
 
 ```bash

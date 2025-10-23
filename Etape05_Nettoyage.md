@@ -38,7 +38,11 @@
 ### Nettoyage sur le bucket de votre équipe
 
 ```bash
-//TODO INPUT
+#Supprimer toutes les données du bucket
+aws s3 rm --recursive s3://sto1-corentin/ --profile sto1
+
+#Checker si tout est supprimé
+aws s3 ls s3://sto1-corentin/ --profile sto1
 ```
 
 ```bash
