@@ -116,13 +116,10 @@ sdc       8:32   0   20G  0 disk
 aws s3 sync s3://sto1-project-data /media/raid1/ --profile sto1
 ```
 
-```bash
-//TODO OUTPUT
-```
 
 ## Problèmes techniques non-résolus
 
-//TODO ajouter ici les liens pointant vers les issues concernées
+Normalement, nous voulions contrôler l'intégrité des données. Mais, après quelques tests nous avons remarqué que le serveur S3 n'arrivait à nous fournir les hashs de tous les fichiers. Nous avons donc mis de côté cette étape car nous pensons que certains fichiers sont obsolètes.
 
 ## Feedback
 

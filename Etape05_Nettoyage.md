@@ -28,10 +28,6 @@
 ### Nettoyage sur l'instance finale
 
 ```bash
-//TODO INPUT
-```
-
-```bash
 //TODO OUTPUT
 ```
 
@@ -43,10 +39,6 @@ aws s3 rm --recursive s3://sto1-corentin/ --profile sto1
 
 #Checker si tout est supprimé
 aws s3 ls s3://sto1-corentin/ --profile sto1
-```
-
-```bash
-//TODO OUTPUT
 ```
 
 ## Problèmes techniques non-résolus
