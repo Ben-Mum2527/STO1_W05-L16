@@ -154,10 +154,6 @@ sde       8:64   0   20G  0 disk
 aws s3 sync s3://sto1-corentin /media/raid6/ --profile sto1
 ```
 
-```bash
-#Comparer les deux fichiers de hash et voir s'ils sont différents
-cmp hashes.txt hashes1.txt || echo "files are different"
-```
 
 ## Problèmes techniques non-résolus
 
