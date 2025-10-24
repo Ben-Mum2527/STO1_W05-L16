@@ -122,8 +122,8 @@ aws s3 sync s3://sto1-project-data /media/raid1/ --profile sto1
 
 ## Problèmes techniques non-résolus
 
-Normalement, nous voulions contrôler l'intégrité des données. Mais, après quelques tests nous avons remarqué que le serveur S3 n'arrivait à nous fournir les hashs de tous les fichiers. Nous avons donc mis de côté cette étape car nous pensons que certains fichiers sont obsolètes.
+//TODO ajouter ici les liens pointant vers les issues concernées
 
 ## Feedback
 
-//TODO expliquer le retour d'expérience (erreurs, comportement inattendu, changement de stratégies)
+Normalement, nous voulions contrôler l'intégrité des données. Mais, après quelques tests nous avons remarqué que le serveur S3 n'arrivait à nous fournir les hashs de tous les fichiers. Nous avons donc mis de côté cette étape car nous pensons que certains fichiers sont obsolètes.

@@ -41,11 +41,6 @@ Un test d'intégrité des données sera réalisé à la fin du processus.
 #### Mise en place
 
 ```bash
-#Obtenir les hashs de tous les fichiers présents dans le dossier /media/raid1/
-cd /media/raid1
-find . -type f -exec sha256sum {} \;| sort -z > "hashes.txt"
-sudo mv hashes.txt /media
-
 #Copier tous les fichiers du raid1 sur le stockage S3
 aws s3 cp /media/raid1/ s3://sto1-corentin/ --recursive --profile sto1
 
@@ -160,12 +155,6 @@ aws s3 sync s3://sto1-corentin /media/raid6/ --profile sto1
 ```
 
 ```bash
-#Créer un fichier contenant les hashs des fichiers téléchargés
-cd /media/raid6
-find . -type f -exec sha256sum {} \;| sort -z > "hashes.txt"
-mv hashes.txt hashes1.txt
-sudo mv hashes1.txt /media
-
 #Comparer les deux fichiers de hash et voir s'ils sont différents
 cmp hashes.txt hashes1.txt || echo "files are different"
 ```
@@ -176,4 +165,5 @@ cmp hashes.txt hashes1.txt || echo "files are different"
 
 ## Feedback
 
-Vu que nous n'arrivions pas à accéder aux hashs des fichiers sur le S3 nous avons créer leurs hashs une fois sur la machine locale et nous comparons les hashs des fichiers une fois qu'ils sont stockés sur le RAID 1 et sur le RAID 6.
+Normalement, nous voulions contrôler l'intégrité des données. Mais, après quelques tests nous avons remarqué que le serveur S3 n'arrivait à nous fournir les hashs de tous les fichiers. Nous avons donc mis de côté cette étape car nous pensons que certains fichiers sont obsolètes.
+
