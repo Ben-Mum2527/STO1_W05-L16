@@ -76,7 +76,10 @@ sudo mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sdb /dev/sdc
 sudo mkfs -t ext4 /dev/md1
 
 # Créer le point de montage du RAID :
-mkdir /media/raid1
+sudo mkdir /media/raid1
+
+#Modifier droit du fichier
+sudo chown -R raidlinux:raidlinux /media/raid1
 
 # Obtenir l’ID du RAID créé et le copier :
 sudo blkid -o value -s UUID /dev/md1
